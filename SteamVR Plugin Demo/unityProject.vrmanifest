@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.steamvrplugindemo.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "F:\\Projects\\Unity3D\\SteamVR Plugin Demo\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "SteamVR Plugin Demo [Testing]"
+        }
+      }
+    }
+  ]
+}
