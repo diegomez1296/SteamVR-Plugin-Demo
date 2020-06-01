@@ -12,6 +12,9 @@ Assets/[Pp]rivateJunk
 Assets/AssetStoreTools*
 Assets/PolygonSciFiCity/
 PolygonSciFiCity/
+Assets/GI_Folder/
+Assets/GI_Folder
+GI_Folder/
 
 # file on crash reports
 sysinfo.txt
