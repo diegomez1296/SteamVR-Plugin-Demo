@@ -27,6 +27,8 @@ namespace Valve.VR
         
         private static SteamVR_Input_ActionSet_GunControls p_GunControls;
         
+        private static SteamVR_Input_ActionSet_RemoteController p_RemoteController;
+        
         public static SteamVR_Input_ActionSet_default _default
         {
             get
@@ -67,6 +69,14 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Input_ActionSet_RemoteController RemoteController
+        {
+            get
+            {
+                return SteamVR_Actions.p_RemoteController.GetCopy<SteamVR_Input_ActionSet_RemoteController>();
+            }
+        }
+        
         private static void StartPreInitActionSets()
         {
             SteamVR_Actions.p__default = ((SteamVR_Input_ActionSet_default)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_default>("/actions/default")));
@@ -74,12 +84,14 @@ namespace Valve.VR
             SteamVR_Actions.p_buggy = ((SteamVR_Input_ActionSet_buggy)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_buggy>("/actions/buggy")));
             SteamVR_Actions.p_mixedreality = ((SteamVR_Input_ActionSet_mixedreality)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_mixedreality>("/actions/mixedreality")));
             SteamVR_Actions.p_GunControls = ((SteamVR_Input_ActionSet_GunControls)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_GunControls>("/actions/GunControls")));
+            SteamVR_Actions.p_RemoteController = ((SteamVR_Input_ActionSet_RemoteController)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_RemoteController>("/actions/RemoteController")));
             Valve.VR.SteamVR_Input.actionSets = new Valve.VR.SteamVR_ActionSet[] {
                     SteamVR_Actions._default,
                     SteamVR_Actions.platformer,
                     SteamVR_Actions.buggy,
                     SteamVR_Actions.mixedreality,
-                    SteamVR_Actions.GunControls};
+                    SteamVR_Actions.GunControls,
+                    SteamVR_Actions.RemoteController};
         }
     }
 }

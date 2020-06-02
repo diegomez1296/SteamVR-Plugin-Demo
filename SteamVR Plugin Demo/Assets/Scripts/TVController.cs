@@ -52,10 +52,10 @@ public class TVController : MonoBehaviour
             SetSpeed();
 
 
-        Debug.Log("Video: " + videoPlayer.isPlaying);
+        //Debug.Log("Video: " + videoPlayer.isPlaying);
     }
 
-    private void Switch()
+    public void Switch()
     {
         if (!isWorking)
             TurnTVOn();
@@ -63,14 +63,14 @@ public class TVController : MonoBehaviour
             TurnTVOff();
     }
 
-    private void TurnTVOn()
+    public void TurnTVOn()
     {
         isWorking = true;
         Play();
         videoPlayer.playbackSpeed = currentSpeed;
         meshRenderer.material = lightScreen;
     }
-    private void TurnTVOff()
+    public void TurnTVOff()
     {
         isWorking = false;
         videoPlayer.Stop();
@@ -78,7 +78,7 @@ public class TVController : MonoBehaviour
     }
 
 
-    private void Volume(bool up)
+    public void Volume(bool up)
     {
         if (!isWorking || !volumeEnabled) return;
 
@@ -96,7 +96,7 @@ public class TVController : MonoBehaviour
         }
     }
 
-    private void Channel(bool next)
+    public void Channel(bool next)
     {
         if (!isWorking) return;
 
@@ -135,7 +135,7 @@ public class TVController : MonoBehaviour
         }
     }
 
-    private void SetSpeed()
+    public void SetSpeed()
     {
         if (!isWorking) return;
 

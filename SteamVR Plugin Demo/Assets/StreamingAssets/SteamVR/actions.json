@@ -93,6 +93,30 @@
     {
       "name": "/actions/GunControls/in/Grab",
       "type": "boolean"
+    },
+    {
+      "name": "/actions/RemoteController/in/PowerBtn",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/RemoteController/in/ChannelNext",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/RemoteController/in/ChannelPrev",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/RemoteController/in/VolumeUp",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/RemoteController/in/VolumeDown",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/RemoteController/in/Speed",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -114,6 +138,10 @@
     },
     {
       "name": "/actions/GunControls",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/RemoteController",
       "usage": "single"
     }
   ],
@@ -184,7 +212,13 @@
       "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
       "/actions/default/in/TouchPad": "TouchPad",
       "/actions/GunControls/in/Fire": "Fire",
-      "/actions/GunControls/in/Grab": "Grab"
+      "/actions/GunControls/in/Grab": "Grab",
+      "/actions/RemoteController/in/PowerBtn": "PowerBtn",
+      "/actions/RemoteController/in/ChannelNext": "ChannelNext",
+      "/actions/RemoteController/in/ChannelPrev": "ChannelPrev",
+      "/actions/RemoteController/in/VolumeUp": "VolumeUp",
+      "/actions/RemoteController/in/VolumeDown": "VolumeDown",
+      "/actions/RemoteController/in/Speed": "Speed"
     }
   ]
 }

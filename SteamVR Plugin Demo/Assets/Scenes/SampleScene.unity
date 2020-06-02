@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 155669197}
   - component: {fileID: 155669196}
   - component: {fileID: 155669195}
+  - component: {fileID: 155669199}
   m_Layer: 0
   m_Name: RemoteController
   m_TagString: Untagged
@@ -584,7 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
-    actionSetPath: 
+    actionSetPath: /actions/RemoteController
   hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 1
@@ -623,6 +624,28 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &155669199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155669193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ee62312a52a9745a87be8948c6ddcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerAction:
+    actionPath: /actions/RemoteController/in/PowerBtn
+    needsReinit: 0
+  debugSphereCast: 0
+  hitObject: {fileID: 0}
+  sphereRadius: 0.5
+  maxDistance: 15
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 32768
 --- !u!1 &171012148
 GameObject:
   m_ObjectHideFlags: 0
@@ -7024,7 +7047,7 @@ GameObject:
   - component: {fileID: 1502800604}
   - component: {fileID: 1502800603}
   - component: {fileID: 1502800602}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10453,7 +10476,7 @@ PrefabInstance:
     - target: {fileID: 114000010591715100, guid: dc06161b6d97feb419f45f03b62e14b9,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000011734077242, guid: dc06161b6d97feb419f45f03b62e14b9,
         type: 3}
@@ -10463,7 +10486,7 @@ PrefabInstance:
     - target: {fileID: 114000011734077242, guid: dc06161b6d97feb419f45f03b62e14b9,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
