@@ -7,6 +7,11 @@ using Valve.VR.InteractionSystem;
 public class RemoteController : MonoBehaviour
 {
     [SerializeField] private SteamVR_Action_Boolean powerAction;
+    [SerializeField] private SteamVR_Action_Boolean volumeUp;
+    [SerializeField] private SteamVR_Action_Boolean volumeDown;
+    [SerializeField] private SteamVR_Action_Boolean channelNext;
+    [SerializeField] private SteamVR_Action_Boolean channelPrev;
+    [SerializeField] private SteamVR_Action_Boolean speedMovie;
     private Interactable interactable;
 
     private TVController connectedTV;
@@ -41,17 +46,11 @@ public class RemoteController : MonoBehaviour
         {
             SteamVR_Input_Sources source = interactable.attachedToHand.handType;
 
-            if (powerAction[source].stateDown)
-            {
-                connectedTV = FindTV();
-
-                if (connectedTV == null) return;
-
-                connectedTV.Switch();
-            }
+            RemoteActions(source);
         }
 
-        //FindTV();
+        if (debugSphereCast)
+            FindTV();
     }
 
     private TVController FindTV()
@@ -81,6 +80,66 @@ public class RemoteController : MonoBehaviour
             hitObject = null;
             return null;
         }
+    }
+
+
+    private void RemoteActions(SteamVR_Input_Sources source)
+    {
+        if (powerAction[source].stateDown) PowerButton();
+        if (volumeUp[source].stateDown) VolumeUpState();
+        if (volumeDown[source].stateDown) VolumeDownState();
+        if (channelNext[source].stateDown) ChannelNextState();
+        if (channelPrev[source].stateDown) ChannelPrevState();
+        if (speedMovie[source].stateDown) SpeedState();
+
+    }
+
+    private void PowerButton()
+    {
+        connectedTV = FindTV();
+
+        if (connectedTV != null)
+            connectedTV.Switch();
+    }
+
+    private void VolumeUpState()
+    {
+        connectedTV = FindTV();
+
+        if (connectedTV != null)
+            connectedTV.Volume(true);
+    }
+
+    private void VolumeDownState()
+    {
+        connectedTV = FindTV();
+
+        if (connectedTV != null)
+            connectedTV.Volume(false);
+    }
+
+    private void ChannelNextState()
+    {
+        connectedTV = FindTV();
+
+        if (connectedTV != null)
+            connectedTV.Channel(true);
+    }
+
+    private void ChannelPrevState()
+    {
+        connectedTV = FindTV();
+
+        if (connectedTV != null)
+            connectedTV.Channel(false);
+    }
+
+    private void SpeedState()
+    {
+        connectedTV = FindTV();
+
+        if (connectedTV != null)
+            connectedTV.SetSpeed();
     }
 
     private void OnDrawGizmos()

@@ -639,6 +639,21 @@ MonoBehaviour:
   powerAction:
     actionPath: /actions/RemoteController/in/PowerBtn
     needsReinit: 0
+  volumeUp:
+    actionPath: /actions/RemoteController/in/VolumeUp
+    needsReinit: 0
+  volumeDown:
+    actionPath: /actions/RemoteController/in/VolumeDown
+    needsReinit: 0
+  channelNext:
+    actionPath: /actions/RemoteController/in/ChannelNext
+    needsReinit: 0
+  channelPrev:
+    actionPath: /actions/RemoteController/in/ChannelPrev
+    needsReinit: 0
+  speedMovie:
+    actionPath: /actions/RemoteController/in/Speed
+    needsReinit: 0
   debugSphereCast: 0
   hitObject: {fileID: 0}
   sphereRadius: 0.5
